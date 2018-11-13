@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Question">
+
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="16dp"
+        android:text="Ask your question!"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:fontFamily="sans-serif" />
+
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="17sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:inputType="textShortMessage"
+        android:hint="Question"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="17sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:inputType="text|textLongMessage"
+        android:hint="Description (Optional)"
+        android:autofillHints="" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            style="@style/AppTheme.FilterSpinner"
+            android:layout_centerVertical="true"
+            android:entries="@array/categories"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancelq"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/submitq"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:text="Submit" />
+    </LinearLayout>
+
+
+</LinearLayout>
